@@ -28,4 +28,18 @@ public class String_ReverserTest {
 
     }
 
+
+    @Test
+    public void whenGivenStringWithPunctuationReturnsWordsInReverseWithPunctuationStayingNextToWordFromOriginalOrder(){
+        String singleSentence = "we are the music makers,";
+
+        String expectedResult = "makers, music the are we";
+
+        String actualResult = string_reverser.reverseString(singleSentence);
+
+        System.out.println(actualResult);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
 }

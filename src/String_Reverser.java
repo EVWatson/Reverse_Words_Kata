@@ -10,6 +10,7 @@ public class String_Reverser {
      */
 
 
+//    reversing an array with a for loop
     public String reverseString(String sentence){
         String[] sentenceSplitIntoWords = sentence.split(" ");
         String sentenceInReverse = "";
@@ -18,6 +19,7 @@ public class String_Reverser {
         }
         return sentenceInReverse.trim();
     }
+
 
 
 }
