@@ -21,8 +21,6 @@ public class String_ReverserTest {
 
          String actualResult = string_reverser.reverseWordsInString(singleSentence);
 
-        System.out.println(actualResult);
-
          assertEquals(expectedResult, actualResult);
 
     }
@@ -37,8 +35,6 @@ public class String_ReverserTest {
 
         String actualResult = string_reverser.reverseWordsInString(singleSentence);
 
-        System.out.println(actualResult);
-
         assertEquals(expectedResult, actualResult);
     }
 
@@ -47,8 +43,6 @@ public class String_ReverserTest {
         String paragraph = "We are the music makers,\nand we are the dreamers of dreams,";
         String expectedResult = "makers, music the are We\ndreams, of dreamers the are we and";
         String actualResult = string_reverser.reverseLinesInParagraph(paragraph);
-
-        System.out.println(actualResult);
 
         assertEquals(expectedResult, actualResult);
     }
