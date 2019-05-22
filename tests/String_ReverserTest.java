@@ -1,4 +1,3 @@
-import jdk.jfr.Name;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,7 +19,7 @@ public class String_ReverserTest {
 
          String expectedResult = "makers music the are we";
 
-         String actualResult = string_reverser.reverseString(singleSentence);
+         String actualResult = string_reverser.reverseWordsInString(singleSentence);
 
         System.out.println(actualResult);
 
@@ -29,13 +28,25 @@ public class String_ReverserTest {
     }
 
 
+
     @Test
-    public void whenGivenStringWithPunctuationReturnsWordsInReverseWithPunctuationStayingNextToWordFromOriginalOrder(){
+    public void whenGivenStringContainingPunctuationReturnsWordsInReverseWithPunctuationStayingNextToWordFromOriginalOrder(){
         String singleSentence = "we are the music makers,";
 
         String expectedResult = "makers, music the are we";
 
-        String actualResult = string_reverser.reverseString(singleSentence);
+        String actualResult = string_reverser.reverseWordsInString(singleSentence);
+
+        System.out.println(actualResult);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void whenGivenParagraphReturnsEachReversedLineInOrder(){
+        String paragraph = "We are the music makers,\nand we are the dreamers of dreams,";
+        String expectedResult = "makers, music the are We\ndreams, of dreamers the are we and";
+        String actualResult = string_reverser.reverseLinesInParagraph(paragraph);
 
         System.out.println(actualResult);
 
