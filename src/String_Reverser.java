@@ -33,7 +33,7 @@ public class String_Reverser {
         for (int word = sentenceSplitIntoWords.length - 1; word >= 0; word--) {
             sentenceInReverse = sentenceInReverse.concat(sentenceSplitIntoWords[word] + " ");
         }
-        return sentenceInReverse.trim();
+        return sentenceInReverse.trim().replaceAll("\\s{2,}", " " );
     }
 
 
